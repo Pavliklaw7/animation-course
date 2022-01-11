@@ -1,2 +1,156 @@
 @import 'components/_reset';
 @import 'components/_fonts';
+
+body {
+	overflow-x: hidden;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1% 5%;
+	background-color: black;
+	color: #fff;
+	font-family:Arial, Helvetica, sans-serif;
+
+	&__title {
+		width: 30%;
+	}
+
+	&__nav {
+		width: 70%;
+	}
+}
+
+.nav {
+	&__link {
+		color: #fff;
+	}
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&__section {
+		width: 100%;
+	}
+
+	.gsap-scrollTriger {
+		height: var(--vh);
+		width: 100%;
+	}
+
+	.gsap-scrollTriger:nth-child(1) {
+		background-color: yellow;
+	}
+
+	.gsap-scrollTriger:nth-child(2) {
+		background-color: yellowgreen;
+	}
+
+	.gsap-scrollTriger:nth-child(3) {
+		background-color: green;
+	}
+}
+
+.container {
+	width: 70%;
+	margin: 10% auto 10%;
+}
+
+.gsap-to,
+.gsap-from,
+.scrollTriger {
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.logo,
+	.shield {
+		width: 10%;
+	}
+}
+
+.gsap-from,
+.scrollTriger {
+	background-color: darkslategrey;
+
+	&__logo {
+		width: 15%;
+	}
+}
+
+.circle-row,
+.circle-col {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 80%;
+
+	&__item {
+		border-radius: 50%;
+		width: 10%;
+
+		&::after {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+		}
+
+		&:nth-child(1) {
+			background-color: #ff0000;
+		}
+
+		&:nth-child(2) {
+			background-color: #27d427;
+		}
+
+		&:nth-child(3) {
+			background-color: #2bb9ae;
+		}
+
+		&:nth-child(4) {
+			background-color: #ffff00;
+		}
+
+		&:nth-child(5) {
+			background-color: #ad39db;
+		}
+	}
+}
+
+.circle-col {
+	padding-top: 15vh;
+	flex-direction: column;
+
+	&__item {
+		margin-bottom: 20vw;
+	}
+}
+
+.nav {
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 5%;
+	}
+
+}

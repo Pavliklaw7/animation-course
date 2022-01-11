@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
   <meta charset="utf-8">
-  <title>Site title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Animation-course</title>
 
   {% include './components/_page-head.html' %}
 </head>
 
 <body class="{{ body_class }}">
-<div class="fluid-wrapper">
-  {% block content %}
+  <div class="fluid-wrapper">
+    <header class="header">
+      <h1 class="header__title">
+        Animation-course
+      </h1>
+      <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">
+              GSAP BASICS
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="scrollTrigger.html" class="nav__link">
+              ScrollTrigger
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    {% block content %}
+
+
+
+    {% endblock %}
+  </div>
+
+  <script src="js/main.js"></script>
+
+  {% include './components/_scripts.html' %}
+
+  {% block footer_scripts %}
   {% endblock %}
-</div>
-
-<script src="js/main.js"></script>
-
-{% include './components/_scripts.html' %}
-
-{% block footer_scripts %}
-{% endblock %}
 </body>
+
 </html>
